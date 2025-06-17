@@ -44,3 +44,9 @@ def yanzhengma(length):
         result+=rando_char(random.choice([True,False]))
     print("验证码:",result)
     return result
+
+import time
+#获取当前的时间
+def get_current_time():
+    s = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    return s
