@@ -1,4 +1,7 @@
 '''
+面向对象特点：继承、多态 、封装
+'''
+'''
 静态方法
 '''
 from msilib import knownbits
@@ -78,9 +81,20 @@ class Weapon(object):
         max_weapon = max(cls.weapons, key=lambda x: x['dam'])
         print(max_weapon)  # 输出: {'name': '刀', 'dam': 1000}
 
-# 模拟数据校验
-infos={'name':'mia','damage':100000 ,'level':'白银'}
-if Player.isvalid(**infos):
-    mia = Player("mia", 100000, '白银')
-else :
-    print("请检查")
+class VIP(Player):
+    #构造函数
+    def __init__(self,name,damage,level,coin):
+       #调用父类的构造函数
+       super().__init__(name, damage, level )
+       self.coin = coin
+
+    #实例方法重写
+    def show(self):
+        print("我是王者荣耀的第%d位玩家，名字是%s ,段位是%s，金币%d"%(Player.numbers, self.name, self.level, self.coin))
+
+mia = Player("mia", 100000, '白银')
+mia.level_up()
+mia.show()
+tom = VIP("tom", 100000, '白银',110)
+tom.show()
+print("我的金币为%d"%tom.coin)

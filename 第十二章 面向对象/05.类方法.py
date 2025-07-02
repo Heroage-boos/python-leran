@@ -69,8 +69,6 @@ class Weapon(object):
 
 mai=Player("mia",1000,"青铜")
 tom=Player("tom",1000,"钻石")
-
-mai.show()
 mai.level_up()
 mai.show()
 tom.show()
