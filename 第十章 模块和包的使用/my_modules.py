@@ -13,3 +13,4 @@ def total(a):
     for i in a:
         result =result + i**2
     return result
+

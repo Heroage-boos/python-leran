@@ -1,0 +1,8 @@
+name =input("请输入您的姓名")
+counterpart =input("请输入您的公司")
+phone =input("请输入您的手机号码")
+address =input("请输入您的公司地址")
+phone=int(phone)
+print("*****************")
+print("姓名：%s 公司：%s 手机号码：%d 地址：%s" % (name,counterpart,phone,address),sep='\n')
+print("*****************")
